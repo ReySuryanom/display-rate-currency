@@ -1,8 +1,8 @@
 function TableRow({ rate, currency }) {
   const base = parseFloat(rate.toFixed(4));
   const formula = (base * 2.5) / 100;
-  const weSell = (base - formula).toFixed(4);
-  const weBuy = (base + formula).toFixed(4);
+  const weSell = (base + formula).toFixed(4);
+  const weBuy = (base - formula).toFixed(4);
 
   const formatting = (number) => {
     const prefix = number === 1 ? number : number.toString().split('.')[0];
